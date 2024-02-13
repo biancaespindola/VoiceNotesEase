@@ -1,3 +1,5 @@
+
+
 export default function AddNoteCard() {
   return (
     <div className="rounded-md p-5 bg-slate-700 space-y-3 ">
