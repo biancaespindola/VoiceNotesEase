@@ -1,7 +1,12 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
+import { useState } from "react";
 
 export default function AddNoteCard() {
+  const [shouldShowOnboarding, setShouldShowOnboarding] = useState(true);
+
+  //function handleStartEm bianca 
+
   return (
     <Dialog.Root>
       <Dialog.Trigger className="rounded-md flex flex-col gap-3 text-left bg-slate-700 p-5 hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400 outline-none">
@@ -29,7 +34,9 @@ export default function AddNoteCard() {
                 recording your audio note
               </button>{" "}
               or if you prefer{" "}
-              <button className="font-medium text-lime-400 hover:underline">
+              <button
+               onClick={() => setShouldShowOnboarding(false)} 
+               className="font-medium text-lime-400 hover:underline">
                 type a new note
               </button>
               .
